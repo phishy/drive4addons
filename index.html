@@ -1,0 +1,13 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="https://1b35ad3ec30d57fa3cd5e87c867ee5a396286062.googledrive.com/host/0B-y85IBqrQAQOG1kZmkzWlVuQWc/bookmarklet.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=load"></script>
+<script>
+    function load() {
+        var interval = setInterval(function () {
+            if (window.hasOwnProperty('auth')) {
+                clearInterval(interval);
+                auth();
+            }
+        }, 10);
+    }
+</script>

