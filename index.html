@@ -1,13 +1,192 @@
-<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-<script src="https://1b35ad3ec30d57fa3cd5e87c867ee5a396286062.googledrive.com/host/0B-y85IBqrQAQOG1kZmkzWlVuQWc/bookmarklet.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=load"></script>
-<script>
-    function load() {
-        var interval = setInterval(function () {
-            if (window.hasOwnProperty('auth')) {
-                clearInterval(interval);
-                auth();
-            }
-        }, 10);
-    }
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>SOLID - Bootstrap 3 Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="assets/js/modernizr.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .navbar-brand {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><i class="fa fa-refresh"></i> Drive for Add-ons</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- *****************************************************************************************************************
+ HEADERWRAP
+ ***************************************************************************************************************** -->
+<div id="headerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Tired of not having control over your code?</h3>
+
+                <h1>Drive for Add-ons.</h1>
+                <h3>Saves your Add-ons Apps Script to Google Drive after ever save.</h3>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 himg">
+                <img src="e71c47ad355a66c7d2399cc70afac2fd.png" class="img-responsive">
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /headerwrap -->
+
+<!-- *****************************************************************************************************************
+ SERVICE LOGOS
+ ***************************************************************************************************************** -->
+<div id="service">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-4">
+                <i class="fa fa-heart-o"></i>
+                <h4>Built Out Of Need</h4>
+                <p>Building any sufficiently large Google Docs Add-on requires that you put it into version
+                control in order to maintain quality. I needed this, so I built it.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-flask"></i>
+                <h4>Bookmarklet Magic</h4>
+                <p>Add this bookmarklet to your browser and click it every time you open your project. When you
+                save a file, it will update the new copy in Google Drive. Now you can put it in git!</p>
+
+                <p><br/><a class="btn btn-lg btn-primary" href="javascript: (function() {
+var e = document.createElement('div');
+e.id = 'gd4ao';
+document.body.appendChild(e);
+var script = document.createElement('script');
+script.setAttribute('src', 'https://code.jquery.com/jquery-2.1.1.min.js');
+document.body.appendChild(script);
+var interval = setInterval(function() {
+if (typeof $.o == 'undefined') {
+clearInterval(interval);
+$('#gd4ao').load('https://8a448f186e5d16264aba4df34f7136b3c7f9356a.googledrive.com/host/0B-y85IBqrQAQaG9PQ2p1TnJtaFE/index.html');
+}
+}, 10);
+}());">Drive 4 Add-ons</a></p>
+                <p>Drag this button to your Bookmarks Bar</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-trophy"></i>
+                <h4>Win at Life</h4>
+                <p>This awesome bookmarklet will astonish all of your friends. You'll see. Be prepared for fame and fortune.
+                This also serves as a great example of how to add functionality to a web page.</p>
+
+            </div>
+        </div>
+    </div>
+    <! --/container -->
+</div>
+<! --/service -->
+
+
+
+
+
+<!-- *****************************************************************************************************************
+ TESTIMONIALS
+ ***************************************************************************************************************** -->
+<div id="twrap">
+    <div class="container centered">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <i class="fa fa-comment-o"></i>
+                <p>We maintain a large codebase inside a Google Docs Add-on and the lack of version control
+                was a nightmare. This bookmarklet saved my life.</p>
+
+                <h4><br/>Jeff Loiselle</h4>
+
+                <p>SOFTWARE ENGINEER - <a href="http://www.specerator.com" style="color:white">SPECERATOR.COM</a></p>
+            </div>
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/twrap -->
+
+
+
+<!-- *****************************************************************************************************************
+ FOOTER
+ ***************************************************************************************************************** -->
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <script type='text/javascript'>(function(){document.write("<img src='http://bostonbuilt.org/icon.php?q=built_in_boston_color_fancy.png&u=" + window.location.host + "' />");})();</script>
+            </div>
+
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/footerwrap -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/retina-1.1.0.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/jquery.hoverex.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+
+
+</body>
+</html>
