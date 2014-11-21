@@ -1,13 +1,20 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/es6-shim/0.20.4/es6-shim.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-<script src="https://1b35ad3ec30d57fa3cd5e87c867ee5a396286062.googledrive.com/host/0B-y85IBqrQAQOG1kZmkzWlVuQWc/bookmarklet.js"></script>
+<script src="https://5ee2e392f0a22b7b839bfb2ac6e9f6b35f95e067.googledrive.com/host/0B-y85IBqrQAQeVpvMC1SWGotVnc/bookmarklet.js"></script>
 <script src="https://apis.google.com/js/client.js?onload=load"></script>
 <script>
     function load() {
+        // disallow loading twice
+        if ('drive' in window && drive.authenticated) {
+            return false;
+        }
+        // @todo This hack exists to deal with synchronous loading issues
         var interval = setInterval(function () {
-            if (window.hasOwnProperty('auth')) {
+            if ('auth' in drive) {
+                console.log('Successfully authenticated with Google');
                 clearInterval(interval);
-                auth();
+                drive.auth();
             }
-        }, 10);
+        }, 100);
     }
 </script>
