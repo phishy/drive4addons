@@ -174,8 +174,7 @@ Drive4Addons.prototype.onReadyStateChangeComplete = function (xhr, data) {
     if (pieces.length != 23) {
         return true;
     }
-
-    this.projectId = pieces[ 4 ];
+    this.projectId = pieces[3].split('/')[7];
     filename = pieces[ 8 ];
     body = pieces[ 10 ];
 
