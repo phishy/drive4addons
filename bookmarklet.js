@@ -1,6 +1,18 @@
 "use strict";
 
-var drive;
+/**
+ * Define our own error handler to avoid the wrath of Caja
+ * @param msg
+ * @param url
+ * @param line
+ * @param col
+ * @param error
+ */
+window.onerror = function(msg, url, line, col, error) {
+    console.log(msg, url, line, col, error);
+}
+
+var drive = false;
 
 /**
  * Constructor sets variables from config parameter

@@ -5,12 +5,12 @@
 <script>
     function load() {
         // disallow loading twice
-        if ('drive' in window && drive.authenticated) {
+        if ('drive' in window && typeof drive != undefined && 'authenticated' in window.drive && window.drive.authenticated) {
             return false;
         }
         // @todo This hack exists to deal with synchronous loading issues
         var interval = setInterval(function () {
-            if ('auth' in drive) {
+            if (drive && 'auth' in drive) {
                 console.log('Successfully authenticated with Google');
                 clearInterval(interval);
                 drive.auth();
