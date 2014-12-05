@@ -190,7 +190,10 @@ Drive4Addons.prototype.onReadyStateChangeComplete = function (xhr, data) {
     filename = pieces[ 8 ];
     body = pieces[ 10 ];
 
-    return this.save(this.projectId, filename, body);
+    var response = JSON.parse(xhr.responseText.replace('//OK', ''));
+    var suffix = (response[13].length == 9) ? '.html' : '.gs';
+
+    return this.save(this.projectId, filename + suffix, body);
 };
 
 drive = new Drive4Addons({
